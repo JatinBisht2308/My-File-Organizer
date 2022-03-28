@@ -14,12 +14,16 @@ console.log(path);
 const helpRequired = require('./commands/help');
 // 2)- requiring the organize.js 
 const organizeRequired = require('./commands/organize');
+// 3)- requiring the tree.js
+const treeRequired = require("./commands/tree");
 // Checking and assiging the userCommand and alloting it a particular function by using Switch statements
 
 switch(userCommand)
 {
     case 'tree':
         // call tree function
+       treeRequired.tree(path);
+       console.log("😇😇😇😇 Required tree for the directory has been created😇😇😇😇");
         break;
     case 'help':
         // call help function
@@ -33,4 +37,4 @@ switch(userCommand)
     default:
         console.log("💀💀!!!command not recognized!!!💀💀");
         process.exit();
-}
+}                             
